@@ -1,9 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and all of the key CRA commands, e.g. `npm start` and `npm test` are available. For simplicity we removed some features, namely service workers.
 
-We further installed the [prop-types](https://www.npmjs.com/package/prop-types) as an explicity dependency.
+We further installed the [prop-types](https://www.npmjs.com/package/prop-types) as an explicit dependency.
 
 ```
 npm install --save prop-types
+```
+
+For styling we use [Styled Components](https://styled-components.com), installed via
+
+```
+npm install --save styled-components
 ```
 
 ## Testing
@@ -16,10 +22,10 @@ Enzyme was installed with:
 npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
 ```
 
-and we further installed the `jest-enzyme` matchers:
+and we further installed the `jest-enzyme` and `jest-styled-components` matchers to help us write tests more concisely:
 
 ```
-npm install --save-dev jest-enzyme
+npm install --save-dev jest-enzyme jest-styled-components
 ```
 
 and created the `src/setupTests.js` file as specified in the documentation.

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
+import styled from 'styled-components';
+
+const ColorLabel = styled.div`
+  display: inline-block;
+  width: 50px;
+  text-align: left;
+`;
 
 function LabeledSlider(props) {
-  const labelStyle = {
-    display: 'inline-block',
-    width: '50px',
-    textAlign: 'left'
-  };
-
   return (
     <div>
-      <div style={labelStyle}>{props.label}:</div>
+      <ColorLabel>{props.label}:</ColorLabel>
       <input
         type="range"
         min="0"
@@ -31,6 +31,13 @@ LabeledSlider.propTypes = {
   valueChange: PropTypes.func.isRequired
 };
 
+const ColorBox = styled.div`
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background: ${props => `rgb(${props.red},${props.green},${props.blue})`};
+`;
+
 class ColorPicker extends Component {
   constructor() {
     super();
@@ -38,18 +45,13 @@ class ColorPicker extends Component {
   }
 
   render() {
-    const colorBoxStyle = {
-      width: '100px',
-      height: '100px',
-      border: '1px solid black',
-      background: `rgb(${this.state.red},${this.state.green},${
-        this.state.blue
-      })`
-    };
-
     return (
       <div>
-        <div id="color" style={colorBoxStyle} />
+        <ColorBox
+          red={this.state.red}
+          green={this.state.green}
+          blue={this.state.blue}
+        />
         <LabeledSlider
           label="Red"
           value={this.state.red}
@@ -76,7 +78,7 @@ class ColorPicker extends Component {
   }
 }
 
-export { ColorPicker };
+export { ColorPicker, ColorBox };
 
 function App() {
   return <ColorPicker />;
