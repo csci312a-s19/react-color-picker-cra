@@ -50,5 +50,11 @@
     "Michael Linderman <mlinderman@middlebury.edu>",
     "Christopher Andrews <candrews@middlebury.edu>"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "10.15.x"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
 }
