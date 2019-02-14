@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 
 function LabeledSlider(props) {
@@ -22,6 +23,12 @@ function LabeledSlider(props) {
     </div>
   );
 }
+
+LabeledSlider.propTypes = {
+  label: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  valueChange: PropTypes.func.isRequired
+};
 
 class ColorPicker extends Component {
   constructor() {

@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and all of the key CRA commands, e.g. `npm start` and `npm test` are available. For simplicity we removed some features, namely service workers.
 
+We further installed the [prop-types](https://www.npmjs.com/package/prop-types) as an explicity dependency.
+
+```
+npm install --save prop-types
+```
+
 ## Testing
 
 The included tests use both Jest and Enzyme as described in the [CRA documentation](https://facebook.github.io/create-react-app/docs/running-tests).
