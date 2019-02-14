@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/csci312a-s19/color-picker-cra.svg?branch=master)](https://travis-ci.com/csci312a-s19/color-picker-cra)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and all of the key CRA commands, e.g. `npm start` and `npm test` are available. For simplicity we removed some features, namely service workers.
 
 We further installed the [prop-types](https://www.npmjs.com/package/prop-types) as an explicit dependency.
